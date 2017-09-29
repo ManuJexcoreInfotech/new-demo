@@ -1,0 +1,21 @@
+<ion-view view-title="Login">
+  	<ion-content padding="10">
+      <div class="list">
+      	<form method="post" ng-submit="submitForm(postForm.$valid)" name="postForm" novalidate>
+        		
+        		<label class="item item-input">
+          		<input required type="email" ng-model="user.email" name="email" placeholder="Email" value="">
+        		</label>
+        		<span ng-message class="item item-input warning-message-normal" ng-show="postForm.email.$error.required && postForm.email.$dirty">Required</span>
+        		<span ng-message class="item item-input warning-message-normal" ng-show="postForm.email.$error.email && postForm.email.$dirty">This is not a valid email.</span>
+        		<label class="item item-input">
+					<input required type="password" ng-model="user.password" name="password" placeholder="password" value="">
+        		</label>
+				<span ng-message class="item item-input warning-message-normal" ng-show="postForm.password.$invalid && postForm.password.$dirty">Required</span>
+        		<button class="button button-block button-{{appColor}}">
+          		Submit
+        		</button>
+        	</form>
+      </div>
+  </ion-content>
+</ion-view>

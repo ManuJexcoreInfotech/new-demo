@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        }
+    }
+}
