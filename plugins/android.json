@@ -15,10 +15,16 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     }

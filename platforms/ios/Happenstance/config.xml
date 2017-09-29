@@ -102,4 +102,10 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="connectivity">
+        <param name="ios-package" value="CDVAppFeelReachability" />
+    </feature>
+    <feature name="AdMobAds">
+        <param name="ios-package" value="CDVAdMobAds" />
+    </feature>
 </widget>

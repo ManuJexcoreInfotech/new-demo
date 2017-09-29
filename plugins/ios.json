@@ -16,6 +16,9 @@
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {
@@ -23,6 +26,12 @@
             "PACKAGE_NAME": "hu.dpal.starter"
         },
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-libgoogleadmobads": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     }

@@ -11,11 +11,15 @@
             "cordova-plugin-device": {},
             "cordova-plugin-geolocation": {
                 "GEOLOCATION_USAGE_DESCRIPTION": " "
-            }
+            },
+            "cordova-admob": {}
         }
     },
     "dependencies": {
+        "cordova-admob": "^4.1.16",
+        "cordova-connectivity-monitor": "^1.2.2",
         "cordova-ios": "^4.4.0",
+        "cordova-libgoogleadmobads": "git+https://github.com/appfeel/google-iosadmobads.git",
         "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-geolocation": "^2.4.3",

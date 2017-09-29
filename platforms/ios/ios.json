@@ -23,6 +23,14 @@
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"connectivity\"><param name=\"ios-package\" value=\"CDVAppFeelReachability\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMobAds\"><param name=\"ios-package\" value=\"CDVAdMobAds\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -32,6 +40,12 @@
                     "NSLocationWhenInUseUsageDescription": [
                         {
                             "xml": "<string> </string>",
+                            "count": 1
+                        }
+                    ],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
                             "count": 1
                         }
                     ]
@@ -54,6 +68,15 @@
         },
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-libgoogleadmobads": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-admob": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -114,6 +137,23 @@
             "clobbers": [
                 "navigator.geolocation"
             ]
+        },
+        {
+            "id": "cordova-connectivity-monitor.connectivity",
+            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+            "pluginId": "cordova-connectivity-monitor",
+            "clobbers": [
+                "window.connectivity"
+            ]
+        },
+        {
+            "id": "cordova-admob.AdMobAds",
+            "file": "plugins/cordova-admob/www/admob.js",
+            "pluginId": "cordova-admob",
+            "clobbers": [
+                "window.admob",
+                "window.tappx"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -121,6 +161,9 @@
         "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-device": "1.1.6",
         "cordova-plugin-compat": "1.0.0",
-        "cordova-plugin-geolocation": "2.4.3"
+        "cordova-plugin-geolocation": "2.4.3",
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-libgoogleadmobads": "7.13.1",
+        "cordova-admob": "4.1.16"
     }
 }

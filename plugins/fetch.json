@@ -37,5 +37,29 @@
         },
         "is_top_level": false,
         "variables": {}
+    },
+    "cordova-admob": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-admob"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-connectivity-monitor": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-connectivity-monitor"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-libgoogleadmobads": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/appfeel/google-iosadmobads"
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }
