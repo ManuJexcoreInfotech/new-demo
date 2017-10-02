@@ -27,8 +27,6 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-		
-        this.receivedEvent('deviceready');
 		window.plugins.AdMob.setOptions( {
           publisherId: "ca-app-pub-7844737046957946/9216355879",
           interstitialAdId: "ca-app-pub-7844737046957946/5278703180",
@@ -48,6 +46,8 @@ var app = {
           function(){},
           function(e){alert(JSON.stringify(e));}
         );
+        this.receivedEvent('deviceready');
+		
     },
 
     // Update DOM on a Received Event
