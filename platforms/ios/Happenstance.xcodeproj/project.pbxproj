@@ -20,6 +20,8 @@
 		6A117FF4259B4B1E82DA416B /* UIWebViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4B7B00F134645BDD54040 /* UIWebViewExtension.m */; };
 		BAAC8B57678B41A9A270BC69 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 885D6B0F4E1B4605AFADF369 /* CDVSplashScreen.m */; };
 		D6685EA88A984FF7ADF0B92A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A10D36B5BCB46C7926DF19E /* CDVViewController+SplashScreen.m */; };
+		B568A39C3CB2416EADBE51E3 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78685ACCEBE444D1B92D6F58 /* GoogleMobileAds.framework */; };
+		AC411319C3CD4F42BAE05E8D /* CDVAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B924665701480186240119 /* CDVAdMob.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,9 @@
 		6A10D36B5BCB46C7926DF19E /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		0F6CE362DD0F4E4C947F8FCD /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		5F5D3FDB136E479B96E7556B /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		78685ACCEBE444D1B92D6F58 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; name = "GoogleMobileAds.framework"; path = "Happenstance/Plugins/cordova-admobsdk/GoogleMobileAds.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C8B924665701480186240119 /* CDVAdMob.m */ = {isa = PBXFileReference; name = "CDVAdMob.m"; path = "cordova-plugin-admob/CDVAdMob.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D093007C835341D7AE1E4533 /* CDVAdMob.h */ = {isa = PBXFileReference; name = "CDVAdMob.h"; path = "cordova-plugin-admob/CDVAdMob.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				B568A39C3CB2416EADBE51E3 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +152,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78685ACCEBE444D1B92D6F58 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 				6A10D36B5BCB46C7926DF19E /* CDVViewController+SplashScreen.m */,
 				0F6CE362DD0F4E4C947F8FCD /* CDVSplashScreen.h */,
 				5F5D3FDB136E479B96E7556B /* CDVViewController+SplashScreen.h */,
+				C8B924665701480186240119 /* CDVAdMob.m */,
+				D093007C835341D7AE1E4533 /* CDVAdMob.h */,
 			);
 			name = Plugins;
 			path = "Happenstance/Plugins";
@@ -295,6 +304,7 @@
 				6A117FF4259B4B1E82DA416B /* UIWebViewExtension.m in Sources */,
 				BAAC8B57678B41A9A270BC69 /* CDVSplashScreen.m in Sources */,
 				D6685EA88A984FF7ADF0B92A /* CDVViewController+SplashScreen.m in Sources */,
+				AC411319C3CD4F42BAE05E8D /* CDVAdMob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +350,7 @@
 					"\"Happenstance/Plugins/cordova-libgoogleadmobads\"",
 					"\"Happenstance/Plugins/cordova-plugin-admobpro\"",
 					"\"Happenstance/Plugins/cordova-admobsdk\"",
+					"\"Happenstance/Plugins/cordova-admobsdk\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,6 +386,7 @@
 					"\"Happenstance/Plugins/cordova-plugin-linkedin\"",
 					"\"Happenstance/Plugins/cordova-libgoogleadmobads\"",
 					"\"Happenstance/Plugins/cordova-plugin-admobpro\"",
+					"\"Happenstance/Plugins/cordova-admobsdk\"",
 					"\"Happenstance/Plugins/cordova-admobsdk\"",
 				);
 				LIBRARY_SEARCH_PATHS = (

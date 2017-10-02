@@ -12,10 +12,16 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-admob": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {
         "com.ionic.keyboard": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-admobsdk": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     }
