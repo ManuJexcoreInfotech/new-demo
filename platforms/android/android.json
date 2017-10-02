@@ -9,11 +9,53 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"AdMobAds\"><param name=\"android-package\" value=\"com.appfeel.cordova.admob.AdMobAds\" /></feature>",
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LinkedIn\"><param name=\"android-package\" value=\"com.zyramedia.cordova.linkedin.LinkedIn\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/facebookconnect.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"fb_app_id\">1749439122016304</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string name=\"fb_app_name\">Happenstance_demo</string>",
                             "count": 1
                         }
                     ]
@@ -21,19 +63,17 @@
             },
             "AndroidManifest.xml": {
                 "parents": {
-                    "/*": [
+                    "application": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
+                            "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationId\" android:value=\"@string/fb_app_id\" />",
+                            "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 2
-                        }
-                    ],
-                    "/manifest/application": [
+                            "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationName\" android:value=\"@string/fb_app_name\" />",
+                            "count": 1
+                        },
                         {
-                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|screenLayout|screenSize|orientation\" android:label=\"@string/fb_app_name\" android:name=\"com.facebook.FacebookActivity\" />",
                             "count": 1
                         }
                     ]
@@ -42,35 +82,48 @@
         }
     },
     "installed_plugins": {
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "aicog2017.mobile.app"
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-admob": {
-            "PACKAGE_NAME": "aicog2017.mobile.app"
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1749439122016304",
+            "APP_NAME": "Happenstance_demo",
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-linkedin": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {},
     "modules": [
         {
-            "id": "cordova-connectivity-monitor.connectivity",
-            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-            "pluginId": "cordova-connectivity-monitor",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
             "clobbers": [
-                "window.connectivity"
+                "navigator.splashscreen"
             ]
         },
         {
-            "id": "cordova-admob.AdMobAds",
-            "file": "plugins/cordova-admob/www/admob.js",
-            "pluginId": "cordova-admob",
+            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+            "pluginId": "cordova-plugin-facebook4",
             "clobbers": [
-                "window.admob",
-                "window.tappx"
+                "facebookConnectPlugin"
+            ]
+        },
+        {
+            "id": "cordova-plugin-linkedin.LinkedIn",
+            "file": "plugins/cordova-plugin-linkedin/www/LinkedIn.js",
+            "pluginId": "cordova-plugin-linkedin",
+            "clobbers": [
+                "cordova.plugins.LinkedIn"
             ]
         }
     ],
     "plugin_metadata": {
-        "cordova-connectivity-monitor": "1.2.2",
-        "cordova-admob": "4.1.16"
+        "cordova-plugin-splashscreen": "4.0.3",
+        "cordova-plugin-facebook4": "1.9.1",
+        "cordova-plugin-linkedin": "1.2.1"
     }
 }

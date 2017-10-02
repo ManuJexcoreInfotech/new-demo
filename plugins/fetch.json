@@ -1,26 +1,38 @@
 {
-    "cordova-admob": {
+    "com.ionic.keyboard": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/driftyco/ionic-plugins-keyboard.git",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-splashscreen": {
         "source": {
             "type": "registry",
-            "id": "cordova-admob"
+            "id": "cordova-plugin-splashscreen@^4.0.3"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-connectivity-monitor": {
+    "cordova-plugin-facebook4": {
         "source": {
             "type": "registry",
-            "id": "cordova-connectivity-monitor"
+            "id": "https://github.com/jeduan/cordova-plugin-facebook4"
         },
-        "is_top_level": false,
-        "variables": {}
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1749439122016304",
+            "APP_NAME": "Happenstance_demo"
+        }
     },
-    "cordova-libgoogleadmobads": {
+    "cordova-plugin-linkedin": {
         "source": {
             "type": "registry",
-            "id": "https://github.com/appfeel/google-iosadmobads"
+            "id": "cordova-plugin-linkedin"
         },
-        "is_top_level": false,
-        "variables": {}
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "78ropzjyw05r1p"
+        }
     }
 }

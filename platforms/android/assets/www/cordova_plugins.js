@@ -1,28 +1,36 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "cordova-connectivity-monitor.connectivity",
-        "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-        "pluginId": "cordova-connectivity-monitor",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "pluginId": "cordova-plugin-splashscreen",
         "clobbers": [
-            "window.connectivity"
+            "navigator.splashscreen"
         ]
     },
     {
-        "id": "cordova-admob.AdMobAds",
-        "file": "plugins/cordova-admob/www/admob.js",
-        "pluginId": "cordova-admob",
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "pluginId": "cordova-plugin-facebook4",
         "clobbers": [
-            "window.admob",
-            "window.tappx"
+            "facebookConnectPlugin"
+        ]
+    },
+    {
+        "id": "cordova-plugin-linkedin.LinkedIn",
+        "file": "plugins/cordova-plugin-linkedin/www/LinkedIn.js",
+        "pluginId": "cordova-plugin-linkedin",
+        "clobbers": [
+            "cordova.plugins.LinkedIn"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-connectivity-monitor": "1.2.2",
-    "cordova-admob": "4.1.16"
+    "cordova-plugin-splashscreen": "4.0.3",
+    "cordova-plugin-facebook4": "1.9.1",
+    "cordova-plugin-linkedin": "1.2.1"
 };
 // BOTTOM OF METADATA
 });

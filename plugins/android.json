@@ -7,13 +7,17 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-admob": {
-            "PACKAGE_NAME": "aicog2017.mobile.app"
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1749439122016304",
+            "APP_NAME": "Happenstance_demo",
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-linkedin": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
-    "dependent_plugins": {
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "aicog2017.mobile.app"
-        }
-    }
+    "dependent_plugins": {}
 }
