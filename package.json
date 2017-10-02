@@ -8,7 +8,8 @@
             "ios"
         ],
         "plugins": {
-            "cordova-plugin-splashscreen": {}
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-admobpro": {}
         }
     },
     "dependencies": {
@@ -16,6 +17,8 @@
         "cordova-browser": "^4.1.0",
         "cordova-ios": "^4.4.0",
         "cordova-libgoogleadmobads": "git+https://github.com/appfeel/google-iosadmobads.git",
+        "cordova-plugin-admobpro": "^2.29.23",
+        "cordova-plugin-extension": "^1.5.2",
         "cordova-plugin-splashscreen": "^4.0.3"
     }
 }
