@@ -1,105 +1,143 @@
-function Service($rootScope, $http, $ionicPopup,Config) {
+/***********************************************************************************
+ * App Services. This contains the logic of the application organised in modules/objects. *
+ ***********************************************************************************/
 
-    var api = {
-        website: 'webservice/api/websiteinfo',
-        store: 'webservice/api/storeinfo',
-        getStaticBlock: '/restconnect/index/getstaticblock',
-        getBannerBlock: '/restconnect/index/getbannerblock',
-        user: '/restconnect/customer/statusData',
-        forgotpwd: '/restconnect/customer/forgotpwd',
-        menus: '/restconnect/?cmd=menu',
-        products: '/restconnect/',
-        login: 'webservice/api/login',
-        logout: 'webservice/api/logout',
-        register: 'webservice/api/register',
-        search: '/restconnect/search',
-        certGet: '/clnews/api/article',
-        searchAdvField: '/restconnect/searchadv/getfield',
-        searchAdv: '/restconnect/searchadv/index',
-        searchAgent: '/storelocator/index/city',
-        productDetail: '/restconnect/products/getproductdetail',
-        productImg: '/restconnect/products/getPicLists',
-        productOption: '/restconnect/products/getcustomoption',
-        cart: '/restconnect/cart/getCartInfo',	//获�?�购物车内容
-        cartGetQty: '/restconnect/cart/getQty',	//
-        cartGetTotal: '/restconnect/cart/getTotal',	//
-        cartAdd: '/restconnect/cart/add'	//直接post到这个接�?�就返回�?�数
-    }, showError = false;
+window.myApp = {};
 
-    $rootScope.service = {
-        get: function (key, params, success, error) {
-			
-            if (typeof params === 'function') {
-                error = success;
-                success = params;
-                params = null;
-            }       
-			
-			
-            var url = Config.WebUrl  + api[key] ;
-			
-            $http.get(url, {
-                params: params,
-                timeout: 20000
-            }).then(function (res) {
-                success(res.data);
-            }, handleError(error));
-        },
-        post: function (key, params, success, error) {
-            if (typeof params === 'function') {
-                callback = params;
-                params = null;
+myApp.services = {
+
+  /////////////////
+  // Task Service //
+  /////////////////
+  tasks: {
+
+    // Creates a new task and attaches it to the pending task list.
+    create: function(data) {
+      // Task item template.
+      var template = document.createElement('div');
+      template.innerHTML =
+        '<ons-list-item tappable category="' + myApp.services.categories.parseId(data.category)+ '">' +
+          '<label class="left">' +
+           '<ons-input type="checkbox"></ons-input>' +
+          '</label>' +
+          '<div class="center">' +
+            data.title +
+          '</div>' +
+          '<div class="right">' +
+            '<ons-icon style="color: grey; padding-left: 4px" icon="ion-ios-trash-outline, material:md-delete"></ons-icon>' +
+          '</div>' +
+        '</ons-list-item>'
+      ;
+
+      // Takes the actual task item.
+      var taskItem = template.firstChild;
+      // Store data within the element.
+      taskItem.data = data;
+
+      // Add 'completion' functionality when the checkbox changes.
+      taskItem.data.onCheckboxChange = function(event) {
+        myApp.services.animators.swipe(taskItem, function() {
+          var listId = (taskItem.parentElement.id === 'pending-list' && event.target.checked) ? '#completed-list' : '#pending-list';
+          document.querySelector(listId).appendChild(taskItem);
+        });
+      };
+
+      taskItem.addEventListener('change', taskItem.data.onCheckboxChange);
+
+      // Add button functionality to remove a task.
+      taskItem.querySelector('.right').onclick = function() {
+        myApp.services.tasks.remove(taskItem);
+      };
+
+      // Add functionality to push 'details_task.html' page with the current element as a parameter.
+      taskItem.querySelector('.center').onclick = function() {
+        document.querySelector('#myNavigator')
+          .pushPage('html/details_task.html',
+            {
+              animation: 'lift',
+              data: {
+                element: taskItem
+              }
             }
-			
-			var userData=[];
-			console.log(params);
-			
-            var url = Config.WebUrl+ api[key];
-			//Object.keys(params).forEach(function(key) {
-			//	userData.push(params[key]);
-            //});
-			//params={test:'gfgfg'};
-			//console.log(params);
-             $http.post(url,params).then(function (res) {
-                success(res.data);
-            }, handleError(error));
-        },
-        sendSms: function (params, success, error) {
-            if (typeof params === 'function') {
-                error = success;
-                success = params;
-                params = null;
-            }
+          );
+      };
 
-            var url = Config.WebUrl + 'smsapi/SendTemplateSMS.php';
-            $http.get(url, {
-                params: params
-            }).then(function (res) {
-                success(res.data);
-            }, handleError(error));
-        }
-    };
+      // Check if it's necessary to create new categories for this item.
+      myApp.services.categories.updateAdd(taskItem.data.category);
 
-    function handleError(error) {
-        return function (err) {
-            if (error) error(err);
-            if (showError) {
-                return;
-            }
-            showError = true;
-            alert($rootScope.translations.network_error+'\r\n'+$rootScope.translations.check_network);
-            
-            $ionicPopup.alert({
-                title: $rootScope.translations.network_error,
-                template: $rootScope.translations.check_network,
-                buttons: [{
-                    text: $rootScope.translations.ok,
-                    onTap: function () {
-                        showError = false;
-                    }
-                }]
-            });
-            
-        };
+      // Add the highlight if necessary.
+      if (taskItem.data.highlight) {
+        taskItem.classList.add('highlight');
+      }
+
+      // Insert urgent tasks at the top and non urgent tasks at the bottom.
+      var pendingList = document.querySelector('#pending-list');
+      pendingList.insertBefore(taskItem, taskItem.data.urgent ? pendingList.firstChild : null);
+    },
+
+    // Modifies the inner data and current view of an existing task.
+    update: function(taskItem, data) {
+      if (data.title !== taskItem.data.title) {
+        // Update title view.
+        taskItem.querySelector('.center').innerHTML = data.title;
+      }
+
+      if (data.category !== taskItem.data.category) {
+        // Modify the item before updating categories.
+        taskItem.setAttribute('category', myApp.services.categories.parseId(data.category));
+        // Check if it's necessary to create new categories.
+        myApp.services.categories.updateAdd(data.category);
+        // Check if it's necessary to remove empty categories.
+        myApp.services.categories.updateRemove(taskItem.data.category);
+
+      }
+
+      // Add or remove the highlight.
+      taskItem.classList[data.highlight ? 'add' : 'remove']('highlight');
+
+      // Store the new data within the element.
+      taskItem.data = data;
+    },
+
+    // Deletes a task item and its listeners.
+    remove: function(taskItem) {
+      taskItem.removeEventListener('change', taskItem.data.onCheckboxChange);
+
+      myApp.services.animators.remove(taskItem, function() {
+        // Remove the item before updating the categories.
+        taskItem.remove();
+        // Check if the category has no items and remove it in that case.
+        myApp.services.categories.updateRemove(taskItem.data.category);
+      });
     }
-}
+  },
+  //////////////////////
+  // Animation Service //
+  /////////////////////
+  animators: {
+
+    // Swipe animation for task completion.
+    swipe: function(listItem, callback) {
+      var animation = (listItem.parentElement.id === 'pending-list') ? 'animation-swipe-right' : 'animation-swipe-left';
+      listItem.classList.add('hide-children');
+      listItem.classList.add(animation);
+
+      setTimeout(function() {
+        listItem.classList.remove(animation);
+        listItem.classList.remove('hide-children');
+        callback();
+      }, 950);
+    },
+
+    // Remove animation for task deletion.
+    remove: function(listItem, callback) {
+      listItem.classList.add('animation-remove');
+      listItem.classList.add('hide-children');
+
+      setTimeout(function() {
+        callback();
+      }, 750);
+    }
+  },
+
+};

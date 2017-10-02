@@ -7,32 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-geolocation": {
-            "GEOLOCATION_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
         "cordova-admob": {
-            "PACKAGE_NAME": "hu.dpal.starter"
+            "PACKAGE_NAME": "aicog2017.mobile.app"
         }
     },
     "dependent_plugins": {
-        "com.ionic.keyboard": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
         "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "hu.dpal.starter"
+            "PACKAGE_NAME": "aicog2017.mobile.app"
         },
         "cordova-libgoogleadmobads": {
-            "PACKAGE_NAME": "hu.dpal.starter"
+            "PACKAGE_NAME": "aicog2017.mobile.app"
         }
     }
 }

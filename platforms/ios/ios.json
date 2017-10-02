@@ -9,22 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"connectivity\"><param name=\"ios-package\" value=\"CDVAppFeelReachability\" /></feature>",
                             "count": 1
                         },
@@ -37,12 +21,6 @@
             },
             "*-Info.plist": {
                 "parents": {
-                    "NSLocationWhenInUseUsageDescription": [
-                        {
-                            "xml": "<string> </string>",
-                            "count": 1
-                        }
-                    ],
                     "NSAppTransportSecurity": [
                         {
                             "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
@@ -54,90 +32,18 @@
         }
     },
     "installed_plugins": {
-        "com.ionic.keyboard": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-geolocation": {
-            "GEOLOCATION_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
         "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "hu.dpal.starter"
+            "PACKAGE_NAME": "aicog2017.mobile.app"
         },
         "cordova-libgoogleadmobads": {
-            "PACKAGE_NAME": "hu.dpal.starter"
+            "PACKAGE_NAME": "aicog2017.mobile.app"
         },
         "cordova-admob": {
-            "PACKAGE_NAME": "hu.dpal.starter"
+            "PACKAGE_NAME": "aicog2017.mobile.app"
         }
     },
     "dependent_plugins": {},
     "modules": [
-        {
-            "id": "com.ionic.keyboard.keyboard",
-            "file": "plugins/com.ionic.keyboard/www/keyboard.js",
-            "pluginId": "com.ionic.keyboard",
-            "clobbers": [
-                "cordova.plugins.Keyboard"
-            ]
-        },
-        {
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "pluginId": "cordova-plugin-splashscreen",
-            "clobbers": [
-                "navigator.splashscreen"
-            ]
-        },
-        {
-            "id": "cordova-plugin-device.device",
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "pluginId": "cordova-plugin-device",
-            "clobbers": [
-                "device"
-            ]
-        },
-        {
-            "id": "cordova-plugin-geolocation.Coordinates",
-            "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
-            "pluginId": "cordova-plugin-geolocation",
-            "clobbers": [
-                "Coordinates"
-            ]
-        },
-        {
-            "id": "cordova-plugin-geolocation.PositionError",
-            "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-            "pluginId": "cordova-plugin-geolocation",
-            "clobbers": [
-                "PositionError"
-            ]
-        },
-        {
-            "id": "cordova-plugin-geolocation.Position",
-            "file": "plugins/cordova-plugin-geolocation/www/Position.js",
-            "pluginId": "cordova-plugin-geolocation",
-            "clobbers": [
-                "Position"
-            ]
-        },
-        {
-            "id": "cordova-plugin-geolocation.geolocation",
-            "file": "plugins/cordova-plugin-geolocation/www/geolocation.js",
-            "pluginId": "cordova-plugin-geolocation",
-            "clobbers": [
-                "navigator.geolocation"
-            ]
-        },
         {
             "id": "cordova-connectivity-monitor.connectivity",
             "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
@@ -157,11 +63,6 @@
         }
     ],
     "plugin_metadata": {
-        "com.ionic.keyboard": "0.0.1",
-        "cordova-plugin-splashscreen": "4.0.3",
-        "cordova-plugin-device": "1.1.6",
-        "cordova-plugin-compat": "1.0.0",
-        "cordova-plugin-geolocation": "2.4.3",
         "cordova-connectivity-monitor": "1.2.2",
         "cordova-libgoogleadmobads": "7.13.1",
         "cordova-admob": "4.1.16"
