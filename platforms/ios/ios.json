@@ -15,96 +15,18 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<plugin name=\"FacebookConnectPlugin\" value=\"FacebookConnectPlugin\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://m.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://graph.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://api.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"LinkedIn\"><param name=\"ios-package\" value=\"LinkedIn\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
             },
             "*-Info.plist": {
                 "parents": {
-                    "FacebookAppID": [
-                        {
-                            "xml": "<string>1749439122016304</string>",
-                            "count": 1
-                        }
-                    ],
-                    "FacebookDisplayName": [
-                        {
-                            "xml": "<string>Happenstance_demo</string>",
-                            "count": 1
-                        }
-                    ],
-                    "CFBundleURLTypes": [
-                        {
-                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb1749439122016304</string></array></dict></array>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>li78ropzjyw05r1p</string></array></dict></array>",
-                            "count": 1
-                        }
-                    ],
-                    "NSAppTransportSecurity": [
-                        {
-                            "xml": "<dict><key>NSExceptionDomains</key><dict><key>facebook.com</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>fbcdn.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>akamaihd.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict></dict></dict>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<key>NSExceptionDomains</key>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<dict><key>linkedin.com</key><dict><key>NSExceptionAllowsInsecureHTTPLoads</key><true /><key>NSIncludesSubdomains</key><true /><key>NSExceptionRequiresForwardSecrecy</key><false /></dict></dict>",
-                            "count": 1
-                        }
-                    ],
-                    "LSApplicationQueriesSchemes": [
-                        {
-                            "xml": "<array><string>fbapi</string><string>fb-messenger-api</string><string>fbauth2</string><string>fbshareextension</string></array>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<array><string>linkedin</string><string>linkedin-sdk2</string><string>linkedin-sdk</string></array>",
-                            "count": 1
-                        }
-                    ],
-                    "LIAppId": [
-                        {
-                            "xml": "<string>78ropzjyw05r1p</string>",
-                            "count": 1
-                        }
-                    ]
+                    "FacebookAppID": [],
+                    "FacebookDisplayName": [],
+                    "CFBundleURLTypes": [],
+                    "NSAppTransportSecurity": [],
+                    "LSApplicationQueriesSchemes": [],
+                    "LIAppId": []
                 }
             }
         }
@@ -114,15 +36,6 @@
             "PACKAGE_NAME": "hu.dpal.starter"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-facebook4": {
-            "APP_ID": "1749439122016304",
-            "APP_NAME": "Happenstance_demo",
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-linkedin": {
-            "APP_ID": "78ropzjyw05r1p",
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -143,28 +56,10 @@
             "clobbers": [
                 "navigator.splashscreen"
             ]
-        },
-        {
-            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-            "pluginId": "cordova-plugin-facebook4",
-            "clobbers": [
-                "facebookConnectPlugin"
-            ]
-        },
-        {
-            "id": "cordova-plugin-linkedin.LinkedIn",
-            "file": "plugins/cordova-plugin-linkedin/www/LinkedIn.js",
-            "pluginId": "cordova-plugin-linkedin",
-            "clobbers": [
-                "cordova.plugins.LinkedIn"
-            ]
         }
     ],
     "plugin_metadata": {
         "com.ionic.keyboard": "0.0.1",
-        "cordova-plugin-splashscreen": "4.0.3",
-        "cordova-plugin-facebook4": "1.9.1",
-        "cordova-plugin-linkedin": "1.2.1"
+        "cordova-plugin-splashscreen": "4.0.3"
     }
 }

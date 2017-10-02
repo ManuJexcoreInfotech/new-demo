@@ -13,26 +13,5 @@
         },
         "is_top_level": true,
         "variables": {}
-    },
-    "cordova-plugin-facebook4": {
-        "source": {
-            "type": "registry",
-            "id": "https://github.com/jeduan/cordova-plugin-facebook4"
-        },
-        "is_top_level": true,
-        "variables": {
-            "APP_ID": "1749439122016304",
-            "APP_NAME": "Happenstance_demo"
-        }
-    },
-    "cordova-plugin-linkedin": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-linkedin"
-        },
-        "is_top_level": true,
-        "variables": {
-            "APP_ID": "78ropzjyw05r1p"
-        }
     }
 }

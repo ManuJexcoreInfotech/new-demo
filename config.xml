@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="hu.dpal.starter" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Facebook-demo</name>
+    <name>Admob-demo</name>
     <description>
         Sample PhoneGap / Cordova application built with Angular and Ionic Framework, uses RequireJS for loading scripts. Example controllers, filters, services, directives and config.
     </description>
@@ -55,12 +55,5 @@
     <access origin="*" />
     <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="^4.4.0" />
-    <plugin name="cordova-plugin-facebook4" spec="git+https://github.com/jeduan/cordova-plugin-facebook4.git">
-        <variable name="APP_ID" value="1749439122016304" />
-        <variable name="APP_NAME" value="Happenstance_demo" />
-    </plugin>
-    <plugin name="cordova-plugin-linkedin" spec="^1.2.1">
-        <variable name="APP_ID" value="78ropzjyw05r1p" />
-    </plugin>
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
 </widget>

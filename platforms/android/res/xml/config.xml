@@ -4,32 +4,15 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
-    <name>Happenstance</name>
+    <name>Admob-demo</name>
     <description>
         Sample PhoneGap / Cordova application built with Angular and Ionic Framework, uses RequireJS for loading scripts. Example controllers, filters, services, directives and config.
     </description>
     <author email="" href="http://dpal.hu">
         Domonkos Pal
     </author>
-    <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.contacts" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.vibration" />
-    <icon src="www/resources/android/icon/icon-72.png" />
+    <content src="index.html" />
+    <icon src="www/resources/icon/app-icon-80.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/resources/android/icon/icon-36.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/resources/android/icon/icon-48.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/resources/android/icon/icon-72.png" />
@@ -66,17 +49,10 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    <feature name="FacebookConnectPlugin">
-        <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <access origin="https://m.facebook.com" />
-    <access origin="https://graph.facebook.com" />
-    <access origin="https://api.facebook.com" />
-    <access origin="https://*.fbcdn.net" />
-    <access origin="https://*.akamaihd.net" />
-    <preference name="android-minSdkVersion" value="15" />
-    <feature name="LinkedIn">
-        <param name="android-package" value="com.zyramedia.cordova.linkedin.LinkedIn" />
-    </feature>
+    <preference name="ShowSplashScreen" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="FadeSplashScreen" value="false" />
 </widget>
