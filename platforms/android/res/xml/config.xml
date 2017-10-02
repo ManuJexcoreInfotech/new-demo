@@ -4,6 +4,12 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="connectivity">
+        <param name="android-package" value="com.appfeel.cordova.connectivity.Connectivity" />
+    </feature>
+    <feature name="AdMobAds">
+        <param name="android-package" value="com.appfeel.cordova.admob.AdMobAds" />
+    </feature>
     <name>Admob-demo</name>
     <description>
         Sample PhoneGap / Cordova application built with Angular and Ionic Framework, uses RequireJS for loading scripts. Example controllers, filters, services, directives and config.
@@ -12,7 +18,7 @@
         Domonkos Pal
     </author>
     <content src="index.html" />
-    <icon src="www/resources/icon/app-icon-80.png" />
+    <icon src="www/resources/android/icon/icon-96.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/resources/android/icon/icon-36.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/resources/android/icon/icon-48.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/resources/android/icon/icon-72.png" />

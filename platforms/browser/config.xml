@@ -8,7 +8,7 @@
         Domonkos Pal
     </author>
     <content src="index.html" />
-    <icon src="www/resources/icon/app-icon-80.png" />
+    <icon src="www/resources/android/icon/icon-96.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/resources/android/icon/icon-36.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/resources/android/icon/icon-48.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/resources/android/icon/icon-72.png" />
