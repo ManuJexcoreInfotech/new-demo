@@ -21,7 +21,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "0.0.1",
-    "cordova-plugin-splashscreen": "4.0.3"
+    "cordova-plugin-splashscreen": "4.0.3",
+    "cordova-plugin-whitelist": "1.3.2"
 };
 // BOTTOM OF METADATA
 });
