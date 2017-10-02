@@ -36,12 +36,11 @@ var app = {
           isTesting: false, // receiving test ad
           autoShow: true // auto show interstitial ad when loaded
         });
-		  // create interstitial ad
-        window.plugins.AdMob.createInterstitialView();
         // display the banner at startup
         window.plugins.AdMob.createBannerView();
         
-      
+        // create interstitial ad
+        window.plugins.AdMob.createInterstitialView();
         window.plugins.AdMob.showInterstitialAd(
           true, 
           function(){},
