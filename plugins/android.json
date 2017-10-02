@@ -9,7 +9,14 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.admob.demo"
+        },
+        "cordova-plugin-admob": {
+            "PACKAGE_NAME": "com.admob.demo"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-admobsdk": {
+            "PACKAGE_NAME": "com.admob.demo"
+        }
+    }
 }
