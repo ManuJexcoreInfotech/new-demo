@@ -22,10 +22,6 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="AdMob">
-        <param name="ios-package" value="CDVAdMobPlugin" />
-        <param name="onload" value="true" />
-    </feature>
     <name>Admob-demo</name>
     <description>
         Sample PhoneGap / Cordova application built with Angular and Ionic Framework, uses RequireJS for loading scripts. Example controllers, filters, services, directives and config.

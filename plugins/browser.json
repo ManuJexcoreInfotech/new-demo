@@ -9,16 +9,10 @@
     "installed_plugins": {
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-plugin-extension": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     }
